@@ -1,0 +1,120 @@
+@import "./style/mixins.scss";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  color: black;
+  background-color: white;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+
+img {
+  display: block;
+}
+
+button {
+  display: inline-block;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+h1 {
+  color: rgba(45, 30, 30, 0.317);
+  letter-spacing: -1.7em;
+  font-family: sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 10px;
+
+  @include respond(tab-port) {
+    font-size: 40px;
+  }
+}
+
+h4 {
+  color: rgb(55, 51, 45);
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1em;
+
+  @include respond(tab-port) {
+    font-size: 25px;
+  }
+}
+
+h3 {
+  color: black;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+
+  @include respond(tab-land) {
+    font-size: 30px;
+  }
+}
+
+h6 {
+  color: rgb(72, 58, 58);
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1em;
+}
+
+.button-primary {
+  color: white;
+  text-align: center;
+  background-color: rgb(40, 58, 84);
+  border-radius: 30px;
+  padding: 10px 30px;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #9e54f0;
+  }
+}
+
+.button-outline {
+  color: black;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid grey;
+  border-radius: 30px;
+  padding: 10px 30px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.button-outline-2 {
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  padding: 10px 30px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}

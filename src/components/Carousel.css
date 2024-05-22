@@ -1,0 +1,85 @@
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    animation: moveStars 50s linear infinite;
+    z-index: 0; 
+  }
+  
+  @keyframes moveStars {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .carousel-item {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.048); 
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    font-family: 'Arial, sans-serif';
+  }
+  .carousel-caption h1 {
+    font-size: 1.5rem; 
+    margin: 0;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .carousel-caption p {
+    font-size: 1rem;
+    margin: 10px 0 0;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+  
+  .slick-dots li button:before {
+    color: white;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #ff69b4; 
+  }
+  
